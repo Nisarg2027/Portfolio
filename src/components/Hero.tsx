@@ -1,13 +1,30 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Code2 } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Code2, TrendingUp } from "lucide-react";
 
 const socials = [
-  { icon: Github, href: "https://github.com", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: Code2, href: "https://leetcode.com", label: "LeetCode" },
+  { icon: Github, href: "https://github.com/Nisarg2027", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/nisargsinghthakur", label: "LinkedIn" },
+  { icon: Code2, href: "https://leetcode.com/u/nisarg_2027/", label: "LeetCode" },
 ];
 
 const Hero = () => {
+  const [lcRating, setLcRating] = useState("Loading...");
+
+  // Dynamically fetch your real LeetCode contest rating
+  useEffect(() => {
+    fetch("https://alfa-leetcode-api.onrender.com/nisarg_2027/contest")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data && data.contestRating) {
+          setLcRating(Math.round(data.contestRating).toString());
+        } else {
+          setLcRating("Active");
+        }
+      })
+      .catch(() => setLcRating("Active")); // Fallback if API is asleep
+  }, []);
+
   return (
     <section className="relative min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 overflow-hidden">
       {/* Grid background */}
@@ -23,7 +40,7 @@ const Hero = () => {
       <div className="absolute top-1/3 -right-40 w-[500px] h-[500px] rounded-full bg-primary/[0.07] blur-[150px] pointer-events-none" />
       <div className="absolute bottom-1/4 -left-32 w-[400px] h-[400px] rounded-full bg-accent/[0.05] blur-[120px] pointer-events-none" />
 
-      <div className="relative max-w-4xl">
+      <div className="relative max-w-4xl mt-12">
         {/* Social links */}
         <motion.div
           initial={{ opacity: 0, x: -16 }}
@@ -43,6 +60,17 @@ const Hero = () => {
               <s.icon className="w-4 h-4" />
             </a>
           ))}
+          
+          {/* Live LeetCode Badge */}
+          <a
+            href="https://leetcode.com/u/nisarg_2027/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-border bg-card/50 text-sm text-muted-foreground hover:text-yellow-500 hover:border-yellow-500/30 transition-all duration-200"
+          >
+            <TrendingUp className="w-4 h-4" />
+            <span>LC Rating: <strong className="text-foreground">{lcRating}</strong></span>
+          </a>
         </motion.div>
 
         <motion.p
@@ -102,10 +130,7 @@ const Hero = () => {
         transition={{ delay: 1.2, duration: 0.8 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}
-        >
+        <motion.div animate={{ y: [0, 8, 0] }} transition={{ repeat: Infinity, duration: 2.5, ease: "easeInOut" }}>
           <ArrowDown className="w-5 h-5 text-muted-foreground" />
         </motion.div>
       </motion.div>

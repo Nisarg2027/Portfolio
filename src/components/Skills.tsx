@@ -1,11 +1,26 @@
 import { motion } from "framer-motion";
 
 const skillGroups = [
-  { category: "Languages", items: ["Java", "Python"] },
-  { category: "Frontend", items: ["React", "Flutter"] },
-  { category: "Backend", items: ["Spring Boot", "WebSockets", "System Architecture"] },
-  { category: "AI / Data", items: ["Deep Learning", "Machine Learning", "DSA"] },
-  { category: "Hardware / IoT", items: ["ESP32", "Arduino Uno", "IoT"] },
+  { 
+    category: "Languages", 
+    items: ["Java", "Python", "C/C++", "JavaScript", "TypeScript", "Dart"] 
+  },
+  { 
+    category: "Frontend", 
+    items: ["React.js", "Flutter", "Tailwind CSS", "Chrome Extensions", "Framer Motion"] 
+  },
+  { 
+    category: "Backend & Systems", 
+    items: ["Spring Boot", "FastAPI", "REST APIs", "WebSockets", "System Architecture"] 
+  },
+  { 
+    category: "AI & Intelligence", 
+    items: ["Deep Learning", "Machine Learning", "LLM Integration", "Prompt Engineering"] 
+  },
+  { 
+    category: "Concepts & Hardware", 
+    items: ["Data Structures & Algorithms", "Git/GitHub", "ESP32", "Arduino Uno", "IoT"] 
+  },
 ];
 
 const container = {
@@ -41,7 +56,7 @@ const Skills = () => {
       >
         {skillGroups.map((group) => (
           <motion.div key={group.category} variants={item}>
-            <h3 className="font-mono text-xs tracking-widest uppercase text-muted-foreground mb-4">{group.category}</h3>
+            <h3 className="font-mono text-[10px] tracking-[0.2em] uppercase text-muted-foreground/60 mb-4">{group.category}</h3>
             <div className="flex flex-wrap gap-2.5">
               {group.items.map((skill) => (
                 <span
