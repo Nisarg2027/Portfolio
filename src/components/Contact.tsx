@@ -18,13 +18,13 @@ const Contact = () => {
         </p>
 
         <div className="flex flex-wrap gap-4">
-          <a
-            href="mailto:thakurnisarg@gmail.com"
-            className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-primary text-primary-foreground font-semibold rounded-lg transition-all duration-200 glow-blue-hover active:scale-[0.97]"
-          >
-            <Mail className="w-4 h-4" />
-            thakurnisarg@gmail.com
-          </a>
+          <a 
+  href="mailto:thakurnisarg@gmail.com" 
+  className="..."
+>
+  <Mail className="w-4 h-4" />
+  Send an Email
+</a>
           <a
             href="https://github.com/Nisarg2027"
             target="_blank"

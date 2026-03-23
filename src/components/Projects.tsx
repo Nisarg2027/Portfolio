@@ -20,7 +20,7 @@ const projects = [
     accentClass: "text-accent",
     accentBg: "bg-accent/10",
     github: "https://github.com/Nisarg2027", // <-- UPDATE THIS
-    live: "", 
+    live: "",
   },
   {
     title: "Ahilya Rakshasutra",
@@ -30,7 +30,7 @@ const projects = [
     accentClass: "text-emerald-400",
     accentBg: "bg-emerald-400/10",
     github: "https://github.com/Nisarg2027/Ahilya-RakshaSutra", // <-- UPDATE THIS
-    live: "", 
+    live: "",
   },
   {
     title: "sachAI: AI Fact-Checker",
@@ -41,6 +41,16 @@ const projects = [
     accentBg: "bg-blue-400/10",
     github: "https://github.com/Nisarg2027/sachAI", // <-- Update this if the repo name is different
     live: "", // You can leave this blank since it requires local API keys to run
+  },
+  {
+    title: "FestFlow: DBMS Management System",
+    description: "A full-stack event management platform featuring a normalized PostgreSQL schema with 17+ tables, automated expense tracking, and a mesmerizing glassmorphism dashboard.",
+    tags: ["React", "Node.js", "PostgreSQL", "Tailwind", "Vite"],
+    icon: Database, // You can use 'Database' or 'LayoutDashboard' from Lucide
+    accentClass: "text-blue-400",
+    accentBg: "bg-blue-400/10",
+    github: "https://github.com/Nisarg2027/DBMS-PROJECT",
+    live: "https://fest-management-eight.vercel.app",
   },
   // {
   //   title: "Portfolio Architecture",
