@@ -49,7 +49,7 @@ const projects = [
     icon: Database, // You can use 'Database' or 'LayoutDashboard' from Lucide
     accentClass: "text-blue-400",
     accentBg: "bg-blue-400/10",
-    github: "https://github.com/Nisarg2027/DBMS-PROJECT",
+    github: "https://github.com/Nisarg2027/Fest-Management",
     live: "https://fest-management-eight.vercel.app",
   },
   // {
