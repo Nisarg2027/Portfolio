@@ -29,8 +29,8 @@ const projects = [
     icon: Server, // Or 'Server', 'Database', or 'Layout' depending on your icon library
     accentClass: "text-teal-400",
     accentBg: "bg-teal-400/10",
-    github: "https://github.com/Nisarg2027/Nexus", // <-- UPDATE THIS
-    live: "",
+    github: "https://github.com/Nisarg2027/nexus-mlops", // <-- UPDATE THIS
+    live: "https://nexus-mlops.vercel.app/",
   },
   {
     title: "Hybrid Region-Based Regressor",
