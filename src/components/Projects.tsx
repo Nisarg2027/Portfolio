@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Cpu, Brain, Wifi, Code, Database, Server } from "lucide-react";
+import { ExternalLink, Github, Cpu, Brain, Wifi, Code, Database, Server, MapIcon } from "lucide-react";
 
 const projects = [
+  
   {
     title: "Real-Time Multiplayer Chess Engine",
     description: "A robust, stateful distributed system featuring live WebSocket matchmaking, PGN-based browser session recovery, server-authoritative role validation, and a custom Minimax AI opponent.",
@@ -9,29 +10,45 @@ const projects = [
     icon: Cpu,
     accentClass: "text-primary",
     accentBg: "bg-primary/10",
-    github: "https://github.com/Nisarg2027/chess-engine-backend", // <-- UPDATE THIS
-    live: "https://chess-engine-project.vercel.app", // <-- UPDATE THIS
+    github: "https://github.com/Nisarg2027/chess-engine-backend",
+    live: "https://chess-engine-project.vercel.app",
+    // Automatically fetches a screenshot of the live site
+    // image: "https://api.microlink.io/?url=https://chess-engine-project.vercel.app&screenshot=true&meta=false&embed=screenshot.url"
   },
   {
     title: "FestFlow: DBMS Management System",
     description: "A full-stack event management platform featuring a normalized PostgreSQL schema with 17+ tables, automated expense tracking, and a mesmerizing glassmorphism dashboard.",
     tags: ["React", "Node.js", "PostgreSQL", "Tailwind", "Vite"],
-    icon: Database, // You can use 'Database' or 'LayoutDashboard' from Lucide
+    icon: Database,
     accentClass: "text-blue-400",
     accentBg: "bg-blue-400/10",
     github: "https://github.com/Nisarg2027/Fest-Management",
     live: "https://fest-management-eight.vercel.app",
+    // image: "https://api.microlink.io/?url=https://fest-management-eight.vercel.app&screenshot=true&meta=false&embed=screenshot.url"
   },
   {
     title: "Nexus MLOps Pipeline",
     description: "An automated, self-healing MLOps pipeline dashboard for monitoring continuous model retraining and zero-downtime deployments.",
     tags: ["React", "FastAPI", "Kubernetes", "MLflow"],
-    icon: Server, // Or 'Server', 'Database', or 'Layout' depending on your icon library
+    icon: Server, 
     accentClass: "text-teal-400",
     accentBg: "bg-teal-400/10",
-    github: "https://github.com/Nisarg2027/nexus-mlops", // <-- UPDATE THIS
+    github: "https://github.com/Nisarg2027/nexus-mlops",
     live: "https://nexus-mlops.vercel.app/",
+    // image: "https://api.microlink.io/?url=https://nexus-mlops.vercel.app/&screenshot=true&meta=false&embed=screenshot.url"
   },
+  {
+    title: "KoraView: Heritage Preservation Platform",
+    description: "A full-stack digital platform dedicated to digitizing Sikkim's monasteries. Features dynamic multimedia rendering, multi-language audio guides, and a community contribution workflow with an admin moderation dashboard.",
+    tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind"],
+    icon: MapIcon, 
+    accentClass: "text-amber-500", 
+    accentBg: "bg-amber-500/10",
+    github: "https://github.com/Nisarg2027/Monastery360",
+    live: "https://koraview-frontend.vercel.app",
+    // image: "https://api.microlink.io/?url=https://koraview-frontend.vercel.app&screenshot=true&meta=false&embed=screenshot.url"
+  },
+
   {
     title: "Hybrid Region-Based Regressor",
     description: "An advanced AI research project featuring a novel architecture that combines decision trees and neural networks for highly accurate data evaluation and regression modeling.",
@@ -42,7 +59,7 @@ const projects = [
     github: "https://github.com/Nisarg2027", // <-- UPDATE THIS
     live: "",
   },
-  
+
   {
     title: "Ahilya Rakshasutra",
     description: "An innovative Cyber Security and software solution developed during the Indore Tech Hackathon, securing 4th place overall.",
@@ -63,7 +80,7 @@ const projects = [
     github: "https://github.com/Nisarg2027/sachAI", // <-- Update this if the repo name is different
     live: "", // You can leave this blank since it requires local API keys to run
   },
-  
+
   // {
   //   title: "Portfolio Architecture",
   //   description: "A highly responsive, dark-themed developer portfolio built with Vite, React, and Framer Motion, featuring real-time API integration.",

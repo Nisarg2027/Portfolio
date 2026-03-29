@@ -27,7 +27,7 @@ const About = () => {
             I am a passionate software engineer specializing in complex distributed systems, full-stack development, 
             and machine learning. When I'm not building real-time applications or participating in LeetCode contests, 
             I am actively researching deep learning architectures and preparing for my MS in Computer Science for the 
-            Fall 2027 intake. I'm also currently learning Japanese.
+            Fall 2027 intake.
           </p>
         </motion.div>
 
@@ -44,7 +44,7 @@ const About = () => {
             </div>
             <div>
               <p className="text-sm text-muted-foreground mb-0.5">Location</p>
-              <p className="font-medium">Balaghat, Madhya Pradesh</p>
+              <p className="font-medium">Indore, Madhya Pradesh</p>
             </div>
           </div>
 

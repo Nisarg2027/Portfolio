@@ -13,16 +13,32 @@ const Hero = () => {
 
   // Dynamically fetch your real LeetCode contest rating
   useEffect(() => {
+    // 1. Check if we already fetched the rating during this visit
+    const cachedRating = sessionStorage.getItem("lcRating");
+    if (cachedRating) {
+      setLcRating(cachedRating);
+      return; // Exit early, don't hit the API!
+    }
+
     fetch("https://alfa-leetcode-api.onrender.com/nisarg_2027/contest")
-      .then((res) => res.json())
+      .then((res) => {
+        // 2. Safely handle 429s before trying to parse JSON
+        if (!res.ok) throw new Error("API rate limited or asleep");
+        return res.json();
+      })
       .then((data) => {
         if (data && data.contestRating) {
-          setLcRating(Math.round(data.contestRating).toString());
+          const rating = Math.round(data.contestRating).toString();
+          setLcRating(rating);
+          sessionStorage.setItem("lcRating", rating); // 3. Save it for later
         } else {
           setLcRating("Active");
         }
       })
-      .catch(() => setLcRating("Active")); // Fallback if API is asleep
+      .catch((error) => {
+        console.warn("Using fallback for LeetCode:", error.message);
+        setLcRating("2000+"); // You can use "Active" or hardcode your impressive rating here!
+      });
   }, []);
 
   return (
