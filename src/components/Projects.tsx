@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github, Cpu, Brain, Wifi, Code, Database, Server, MapIcon } from "lucide-react";
 
 const projects = [
-  
+
   {
     title: "Real-Time Multiplayer Chess Engine",
     description: "A robust, stateful distributed system featuring live WebSocket matchmaking, PGN-based browser session recovery, server-authoritative role validation, and a custom Minimax AI opponent.",
@@ -30,7 +30,7 @@ const projects = [
     title: "Nexus MLOps Pipeline",
     description: "An automated, self-healing MLOps pipeline dashboard for monitoring continuous model retraining and zero-downtime deployments.",
     tags: ["React", "FastAPI", "Kubernetes", "MLflow"],
-    icon: Server, 
+    icon: Server,
     accentClass: "text-teal-400",
     accentBg: "bg-teal-400/10",
     github: "https://github.com/Nisarg2027/nexus-mlops",
@@ -41,14 +41,24 @@ const projects = [
     title: "KoraView: Heritage Preservation Platform",
     description: "A full-stack digital platform dedicated to digitizing Sikkim's monasteries. Features dynamic multimedia rendering, multi-language audio guides, and a community contribution workflow with an admin moderation dashboard.",
     tags: ["React", "Node.js", "MongoDB", "Express", "Tailwind"],
-    icon: MapIcon, 
-    accentClass: "text-amber-500", 
+    icon: MapIcon,
+    accentClass: "text-amber-500",
     accentBg: "bg-amber-500/10",
     github: "https://github.com/Nisarg2027/Monastery360",
     live: "https://koraview-frontend.vercel.app",
     // image: "https://api.microlink.io/?url=https://koraview-frontend.vercel.app&screenshot=true&meta=false&embed=screenshot.url"
   },
 
+  {
+    title: "Ahilya Rakshasutra",
+    description: "An innovative Cyber Security and software solution developed during the Indore Tech Hackathon, securing 4th place overall.",
+    tags: ["Machine Learning", "FastAPI", "React", "Flutter"],
+    icon: Wifi,
+    accentClass: "text-emerald-400",
+    accentBg: "bg-emerald-400/10",
+    github: "https://github.com/Nisarg2027/ahilya",
+    live: "https://ahilya-dashboard.vercel.app/",
+  },
   {
     title: "Hybrid Region-Based Regressor",
     description: "An advanced AI research project featuring a novel architecture that combines decision trees and neural networks for highly accurate data evaluation and regression modeling.",
@@ -60,16 +70,6 @@ const projects = [
     live: "",
   },
 
-  {
-    title: "Ahilya Rakshasutra",
-    description: "An innovative Cyber Security and software solution developed during the Indore Tech Hackathon, securing 4th place overall.",
-    tags: ["ESP32", "Arduino", "System Integration"],
-    icon: Wifi,
-    accentClass: "text-emerald-400",
-    accentBg: "bg-emerald-400/10",
-    github: "https://github.com/Nisarg2027/Ahilya-RakshaSutra", // <-- UPDATE THIS
-    live: "",
-  },
   {
     title: "sachAI: AI Fact-Checker",
     description: "An intelligent fact-checking system featuring a Python API backend and a custom Chrome Extension. It leverages Groq's LLM capabilities and the Tavily Search API for real-time claim verification.",
